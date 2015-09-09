@@ -93,6 +93,4 @@ public class CassandraBot extends ListenerAdapter {
         PircBotX bot = new PircBotX(configuration);
         bot.startBot();
 	}
-
-
 }
