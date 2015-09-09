@@ -75,6 +75,7 @@ public class CassandraBot extends ListenerAdapter {
 			}else{
 				event.respond("Command not found, type 'help' for help.");
 			}
+			mysql.close();
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -85,7 +86,6 @@ public class CassandraBot extends ListenerAdapter {
         Configuration configuration = new Configuration.Builder()
         	.setName("CassandraBot") //Set the nick of the bot.
         	.setServerHostname("irc.ppy.sh") //Join bancho
-        	.addAutoJoinChannel("#osu") //Join the official #osu channel
         	.setServerPassword("9569c696") //CassandraBot's IRC password
         	.addListener(new CassandraBot()) //Add our listener that will be called on Events
         	.buildConfiguration();
