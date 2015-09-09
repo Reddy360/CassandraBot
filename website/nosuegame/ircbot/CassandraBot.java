@@ -37,8 +37,8 @@ public class CassandraBot extends ListenerAdapter {
 				
 				if(result.last()){
 					int playerID = result.getInt("ID");
-					event.respond("You have a nosue! account");
-					event.respond(String.format("[http://nosuegame.website/u/%d Click here to vist your profile]", playerID));
+					String playerName = result.getString("displayName");
+					event.respond(String.format("You are [http://nosuegame.website/u/%d %s] on nosue!", playerID, playerName));
 				}else{
 					event.respond("Account not found on nosue!");
 					event.respond("[http://nosuegame.website/register.php Click here to register]");
