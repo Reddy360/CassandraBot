@@ -15,6 +15,7 @@ import org.pircbotx.hooks.events.PrivateMessageEvent;
 
 
 public class CassandraBot extends ListenerAdapter {
+	//Just to let you know, we changed these ages ago
 	private static final String DB_USERNAME = "root";
 	private static final String DB_PASSWORD = "12apples";
 	private static final String DB_NAME     = "osuserver";
